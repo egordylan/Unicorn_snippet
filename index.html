@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Unicorns!</title>
+</head>
+<body>
+	<h1>Unicorns!</h1>
+
+	<h2>Instructions</h2>
+	<p>
+		Write a code snippet which will decorate every <code>&lt;em></code> element in <code>div#amazing-wrapper</code> with a unicorn!
+	</p>
+	<ul>
+		<li>Unicorn should be added within each <code>&lt;em></code> on its end (separated by space from the existing text).</li>
+		<li>Please, provide two solutions for this problem - one using pure CSS and the second using pure JS.</li>
+	</ul>
+
+	<h2>Preview</h2>
+
+	<div id="amazing-wrapper-result">
+		<strong>Every single</strong> <em>emphasis 🦄</em> shall be <em>decorated 🦄</em> with a <em><strong>unicorn</strong> 🦄</em>, period!
+	</div>
+
+	<h2>Task</h2>
+
+	<div id="amazing-wrapper">
+		<strong>Every single</strong> <em>emphasis</em> shall be <em>decorated</em> with a <em><strong>unicorn</strong></em>, period!
+	</div>
+
+	<script>
+        const unicorn = '&#129412';
+        const idAmazingWrapper = document.getElementById('amazing-wrapper');
+        const amazingWrapper = idAmazingWrapper.getElementsByTagName('em');
+        // console.log(amazingWrapper)
+        for(let i = 0; i < amazingWrapper.length; i++){
+            amazingWrapper[i].insertAdjacentHTML('beforeend', ' ' + unicorn);
+        }	
+	</script>
+</body>
+</html>
